@@ -1,0 +1,128 @@
+<mxfile host="app.diagrams.net" modified="2024-06-12" agent="Mozilla/5.0" etag="EcookMicroserviceArchitecture" version="21.3.7" type="device">
+  <diagram name="Ecook Microservice Architecture" id="ecook-microservice-flow">
+    <mxGraphModel dx="1434" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <object label="Root" id="0">
+          <mxCell/>
+        </object>
+        <object label="Page 1" id="1" parent="0"/>
+        
+        <!-- API Gateway -->
+        <object label="API Gateway" id="api-gateway">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+            <mxGeometry x="320" y="40" width="200" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- Authentication Service -->
+        <object label="Authentication Service" id="auth-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+            <mxGeometry x="80" y="160" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- React Admin Panel -->
+        <object label="React Admin Panel" id="admin-panel">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+            <mxGeometry x="600" y="40" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- Kafka Message Broker -->
+        <object label="Kafka Message Broker" id="message-broker">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+            <mxGeometry x="320" y="200" width="200" height="40" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- Core Services -->
+        <object label="Mobile Service" id="mobile-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+            <mxGeometry x="160" y="300" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="IoT Service" id="iot-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+            <mxGeometry x="320" y="300" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="Notification Service" id="notification-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+            <mxGeometry x="480" y="300" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- Integration Services -->
+        <object label="HubSpot Service" id="hubspot-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+            <mxGeometry x="160" y="420" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="HubSpot Synchronizers" id="hubspot-sync">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+            <mxGeometry x="320" y="420" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="Angaza Service" id="angaza-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+            <mxGeometry x="480" y="420" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- Management Services -->
+        <object label="Country Management Service" id="country-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+            <mxGeometry x="160" y="540" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="Payment Service" id="payment-service">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+            <mxGeometry x="320" y="540" width="120" height="60" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="Bkash Gateway" id="bkash-gateway">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
+            <mxGeometry x="480" y="520" width="120" height="30" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="AbaPay Gateway" id="abapay-gateway">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
+            <mxGeometry x="480" y="560" width="120" height="30" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <!-- Connections -->
+        <object label="" id="connection1">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="auth-service" target="api-gateway">
+            <mxGeometry relative="1" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="" id="connection2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="api-gateway" target="mobile-service">
+            <mxGeometry relative="1" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="" id="connection3">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="api-gateway" target="iot-service">
+            <mxGeometry relative="1" as="geometry"/>
+          </mxCell>
+        </object>
+        
+        <object label="" id="connection4">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;" edge="1" parent="1" source="mobile-service" target="message-broker">
+            <mxGeometry relative="1" as="geometry"/>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
